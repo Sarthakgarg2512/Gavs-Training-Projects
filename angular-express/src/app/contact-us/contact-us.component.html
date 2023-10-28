@@ -1,0 +1,49 @@
+<b>Enter Contact Details</b>
+
+  <form #contactData="ngForm" (ngSubmit)="addContact(contactData)">
+
+    Sno<br>
+    <input  name="SNo" type="number" ngModel><br><br>
+
+    First Name<br>
+    <input name="FirstName" type="text" ngModel><br><br>
+
+    Last Name<br>
+    <input name="LastName" type="text" ngModel><br><br>
+
+    Email ID<br>
+    <input name="EmailId" type="email" ngModel><br><br>
+
+    Phone Number <br>
+    <input name="PhoneNumber" type="number" ngModel><br><br>
+
+    Address <br>
+    <input name="Address" type="text" ngModel><br><br>
+
+    <input type="submit" value="Add Contact">&nbsp;
+    <input type="button" value="Get Contacts" (click)="getAllContacts()">&nbsp;
+    <input type="button" value="Update Contact" (click)="updateContact(contactData)">&nbsp;
+    <input type="button" value="Delete Contact" (click)="deleteContact(contactData)">&nbsp;
+  </form><br>
+  <label ><b>{{this.expresponse}}</b></label><br><br>
+
+  <b>List of Users</b>
+  <table >
+      <tr>
+        <th>SNo</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email ID</th>
+        <th>Phone Number</th>
+        <th>Address</th>
+      </tr>
+      <tr *ngFor="let contact of contactList">
+        <td>{{ contact.SNo }}</td>
+        <td>{{ contact.FirstName }}</td>
+        <td>{{ contact.LastName }}</td>
+        <td>{{ contact.EmailId }}</td>
+        <td>{{ contact.PhoneNumber }}</td>
+        <td>{{ contact.Address }}</td>
+      </tr>
+  </table><br><br>
+  

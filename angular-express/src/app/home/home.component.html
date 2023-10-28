@@ -1,0 +1,36 @@
+
+<b>Enter User's Data</b>
+<!-- userData is the model created automatically with mentioed fields -->
+  <form #userData="ngForm" (ngSubmit)="addUser(userData)">
+    <!-- above line will be represented as var userData=new NgForm(); -->
+
+    User ID<br>
+    <input  name="userid" type="text" ngModel><br><br>
+
+    Password<br>
+    <input name="password" type="password" ngModel><br><br>
+
+    Email ID<br>
+    <input name="emailid" type="email" ngModel><br><br>
+
+    <input type="submit" value="Add User"><br> <br>
+    <input type="button" value="Get User" (click)="getAllUsers()">
+    <input type="button" value="Update" (click)="updateUser(userData)">
+    <input type="button" value="Delete" (click)="deleteUser(userData)">
+  </form><br>
+  <label ><b>{{this.expresponse}}</b></label><br><br>
+
+  <b>List of Users</b>
+  <table >
+      <tr>
+        <th>User ID</th>
+        <th>Password</th>
+        <th>Email ID</th>
+      </tr>
+      <tr *ngFor="let user of userList">
+        <td>{{ user.userid }}</td>
+        <td>{{ user.password }}</td>
+        <td>{{ user.emailid }}</td>
+      </tr>
+  </table><br><br>
+  

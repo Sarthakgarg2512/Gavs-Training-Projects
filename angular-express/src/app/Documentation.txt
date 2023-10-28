@@ -1,0 +1,12 @@
+ng generate service "Name Of service"
+
+We introduce service layer in between controller and backend.
+For better design and to make controller code light service is introduced 
+This service will communicate with API's then that will comm. to database.
+
+import { BackendServiceService } from './backend-service.service';
+in component.ts to use it 
+
+Dependency Injection Mechanism is used here: 
+in this Constructor Dependency is used.
+
