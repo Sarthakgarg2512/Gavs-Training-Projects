@@ -1,0 +1,26 @@
+body{
+  background-color: rgb(184, 8, 8);
+}
+.form{
+  margin-top: 40PX;
+  border:  2PX SOLID black;
+  border-radius: 10PX;
+  padding:  40px 30px;
+  background-color: rgb(232, 208, 48);
+  width:30%;
+}
+.divOutput{
+  width:40%;
+  background-color:gold;
+  margin-top: 40px;
+  border:  2PX SOLID black;
+  border-radius: 10PX;  
+  padding:  14px 30px;
+}
+li{
+  list-style-type: none;
+}
+.custom-purple-navbar {
+  background-color: black;
+  color:white;
+}
